@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DomainCollateral - Get Cash Loans Using Your Domain as Collateral</title>
+    <style>
+        :root {
+            --primary: #4f46e5;
+            --secondary: #10b981;
+            --dark: #1e293b;
+            --light: #f8fafc;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+        body {
+            background-color: #f1f5f9;
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        header {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 1rem 5%;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        .hero {
+            text-align: center;
+            padding: 4rem 1rem;
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+            color: white;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+        .cta-button {
+            display: inline-block;
+            background: var(--secondary);
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .how-it-works {
+            padding: 4rem 5%;
+            background: white;
+        }
+        .steps {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+        }
+        .step {
+            flex: 1;
+            min-width: 250px;
+            margin: 1rem;
+            padding: 2rem;
+            background: var(--light);
+            border-radius: 10px;
+            text-align: center;
+        }
+        .step-number {
+            background: var(--primary);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-weight: bold;
+        }
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+        .domain-checker {
+            max-width: 600px;
+            margin: 2rem auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">DomainCollateral</div>
+            <div>
+                <a href="#" class="cta-button">Login</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Unlock Cash From Your Domain Name</h1>
+        <p>Get instant loans using your valuable domain names as collateral. No credit checks, just domain value.</p>
+        <a href="#check" class="cta-button">Check My Domain Value</a>
+    </section>
+
+    <section id="check" class="domain-checker">
+        <h2>How much can you borrow?</h2>
+        <input type="text" placeholder="Enter your domain name (e.g., yourdomain.com)">
+        <a href="#" class="cta-button">Get Instant Valuation</a>
+    </section>
+
+    <section class="how-it-works">
+        <h2 style="text-align: center;">How It Works</h2>
+        <div class="steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Submit Your Domain</h3>
+                <p>Enter your domain name and our AI will instantly evaluate its worth.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Get Loan Offer</h3>
+                <p>Receive a loan offer within minutes, typically 30-50% of domain value.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Get Funded</h3>
+                <p>Once accepted, funds are transferred same day. Your domain stays secure in escrow.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 DomainCollateral. All rights reserved.</p>
+    </footer>
+</body>
+</html>

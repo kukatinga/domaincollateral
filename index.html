@@ -1,26 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-     <!-- Favicon (PNG + ICO for maximum compatibility) -->
+    <!-- Favicon (PNG + ICO for maximum compatibility) -->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="icons8-exchange-48.png" type="image/png" sizes="48x48">
     
-    
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-PMVLTLWD7V"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-PMVLTLWD7V');
-</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PMVLTLWD7V"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-PMVLTLWD7V');
+    </script>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DomainCollateral | Loans Against Your Domain Names</title>
+    <meta name="description" content="Get instant loans using your domain names as collateral. No credit checks. Competitive rates.">
+    
+    <!-- Preconnect to external resources -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Trust Signal: Schema.org markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FinancialService",
+      "name": "DomainCollateral",
+      "description": "Domain-backed lending platform",
+      "url": "https://domaincollateral.com",
+      "logo": "https://domaincollateral.com/logo.png"
+    }
+    </script>
+    
     <style>
         :root {
             --primary: #6366F1;  /* Vibrant purple */
@@ -133,6 +148,8 @@
             text-decoration: none;
             transition: all 0.3s ease;
             font-size: 1rem;
+            cursor: pointer;
+            border: none;
         }
         
         .btn-primary {
@@ -200,6 +217,55 @@
             padding: 0 2rem;
         }
         
+        /* ===== Trust Signals ===== */
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            padding: 3rem 0;
+            background: white;
+        }
+        
+        .trust-badge {
+            height: 40px;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+        
+        .trust-badge:hover {
+            opacity: 1;
+        }
+        
+        /* ===== Loan Terms Transparency ===== */
+        .loan-terms {
+            background: var(--light);
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .loan-terms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .term-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .term-card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
         /* ===== How It Works ===== */
         .section {
             padding: 6rem 5%;
@@ -253,6 +319,45 @@
             color: var(--dark);
         }
         
+        /* ===== Testimonials ===== */
+        .testimonials {
+            background: var(--gradient);
+            color: white;
+            padding: 6rem 0;
+            text-align: center;
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .testimonial {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: left;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            margin-top: 1.5rem;
+        }
+        
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 1rem;
+            object-fit: cover;
+        }
+        
         /* ===== Footer ===== */
         footer {
             background: var(--dark);
@@ -293,6 +398,13 @@
             padding-top: 2rem;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             color: #94A3B8;
+            font-size: 0.9rem;
+        }
+        
+        .disclaimer {
+            font-size: 0.8rem;
+            opacity: 0.7;
+            margin-top: 1rem;
         }
         
         /* ===== Responsive Design ===== */
@@ -328,10 +440,10 @@
         <nav>
             <div class="logo">DomainCollateral</div>
             <div class="nav-links">
-                <a href="#">How It Works</a>
-                <a href="#">Pricing</a>
-                <a href="#">About</a>
-                <a href="#">Login</a>
+                <a href="#how-it-works">How It Works</a>
+                <a href="#loan-terms">Loan Terms</a>
+                <a href="#testimonials">Testimonials</a>
+                <a href="#" class="btn btn-primary" style="margin-left: 1rem;">Apply Now</a>
             </div>
         </nav>
     </header>
@@ -343,7 +455,7 @@
             <p>Get loans in minutes using your valuable domains as collateral. No credit checks, just domain value.</p>
             <div class="hero-buttons">
                 <a href="#check" class="btn btn-primary">Check My Domain Value</a>
-                <a href="#" class="btn btn-secondary">Learn More</a>
+                <a href="#loan-terms" class="btn btn-secondary">See Loan Terms</a>
             </div>
         </div>
     </section>
@@ -352,14 +464,48 @@
     <div class="domain-checker" id="check">
         <h2>How much can you borrow?</h2>
         <div class="input-group">
-            <input type="text" placeholder="Enter your domain (e.g., premiumdomain.com)">
-            <button class="btn btn-primary">Get Valuation</button>
+            <input type="text" id="domainInput" placeholder="Enter your domain (e.g., premiumdomain.com)">
+            <button class="btn btn-primary" onclick="checkDomain()">Get Valuation</button>
         </div>
-        <p>Example: "Crypto.com" could qualify for $500,000+</p>
+        <p class="disclaimer">Valuations are estimates. Final offers may vary based on appraisal.</p>
+        <div id="valuationResult" style="margin-top: 1rem; display: none;">
+            <h3>Estimated Value: <span id="domainValue">$0</span></h3>
+            <p>Potential Loan Amount: <span id="loanAmount">$0</span> (50% LTV)</p>
+            <a href="#apply" class="btn btn-primary" style="margin-top: 1rem;">Apply Now</a>
+        </div>
     </div>
 
+    <!-- Trust Badges -->
+    <div class="trust-badges">
+        <img src="https://via.placeholder.com/150x40?text=TechCrunch" alt="Featured in TechCrunch" class="trust-badge">
+        <img src="https://via.placeholder.com/150x40?text=Forbes" alt="Featured in Forbes" class="trust-badge">
+        <img src="https://via.placeholder.com/150x40?text=DNJournal" alt="Featured in DNJournal" class="trust-badge">
+    </div>
+
+    <!-- Loan Terms Transparency -->
+    <section class="loan-terms" id="loan-terms">
+        <h2 class="section-title">Competitive Loan Terms</h2>
+        <div class="loan-terms-grid">
+            <div class="term-card">
+                <h3>Loan-to-Value Ratio</h3>
+                <p>Up to 60% of your domain's appraised value</p>
+            </div>
+            <div class="term-card">
+                <h3>Interest Rates</h3>
+                <p>Starting at 8.9% APR</p>
+            </div>
+            <div class="term-card">
+                <h3>Repayment Period</h3>
+                <p>6-36 month terms available</p>
+            </div>
+        </div>
+        <p class="disclaimer" style="max-width: 800px; margin: 2rem auto 0;">
+            *Not a bank. Loans subject to approval. Rates and terms vary based on domain quality and market conditions.
+        </p>
+    </section>
+
     <!-- How It Works Section -->
-    <section class="section">
+    <section class="section" id="how-it-works">
         <h2 class="section-title">How DomainCollateral Works</h2>
         <div class="steps">
             <div class="step">
@@ -376,6 +522,33 @@
                 <div class="step-number">3</div>
                 <h3>Get Funded</h3>
                 <p>Once accepted, funds are transferred same day. Your domain stays secure in our escrow system.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials" id="testimonials">
+        <h2 style="color: white; margin-bottom: 3rem;">What Our Clients Say</h2>
+        <div class="testimonial-grid">
+            <div class="testimonial">
+                <p>"DomainCollateral gave me $250k against my crypto domain when I needed liquidity fast. The process was seamless."</p>
+                <div class="testimonial-author">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael T." class="author-avatar">
+                    <div>
+                        <strong>Michael T.</strong>
+                        <div>Domain Investor</div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial">
+                <p>"As a startup, we used our premium domain to secure funding without diluting equity. Game changer!"</p>
+                <div class="testimonial-author">
+                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah K." class="author-avatar">
+                    <div>
+                        <strong>Sarah K.</strong>
+                        <div>Tech Founder</div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -399,14 +572,43 @@
             </div>
             <div class="footer-column">
                 <h3>Legal</h3>
-                <a href="#">Terms of Service</a>
-                <a href="#">Privacy Policy</a>
-                <a href="#">Loan Agreement</a>
+                <a href="terms.html">Terms of Service</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="loan-agreement.html">Loan Agreement</a>
+                <a href="disclosures.html">Lender Disclosures</a>
             </div>
         </div>
         <div class="copyright">
-            &copy; 2023 DomainCollateral. All rights reserved.
+            &copy; 2025 DomainCollateral. All rights reserved.
+            <div class="disclaimer">
+                DomainCollateral is not a bank. Loans made through our platform are subject to credit approval and domain valuation.
+            </div>
         </div>
     </footer>
+
+    <!-- Domain Checker JavaScript -->
+    <script>
+        function checkDomain() {
+            // Placeholder for API integration
+            const domain = document.getElementById('domainInput').value.trim();
+            if (!domain) return;
+            
+            // Simulate API call with random valuation
+            const randomValue = Math.floor(Math.random() * 500000) + 5000;
+            const loanAmount = Math.floor(randomValue * 0.5);
+            
+            document.getElementById('domainValue').textContent = '$' + randomValue.toLocaleString();
+            document.getElementById('loanAmount').textContent = '$' + loanAmount.toLocaleString();
+            document.getElementById('valuationResult').style.display = 'block';
+            
+            // Scroll to results
+            document.getElementById('valuationResult').scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        // Example: Pressing Enter in input field triggers check
+        document.getElementById('domainInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') checkDomain();
+        });
+    </script>
 </body>
 </html>

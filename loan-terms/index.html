@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DomainCollateral | Loan Terms & Conditions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #6366F1;
+            --primary-dark: #4F46E5;
+            --secondary: #10B981;
+            --dark: #1E293B;
+            --light: #F8FAFC;
+            --gradient: linear-gradient(135deg, #6366F1 0%, #A855F7 100%);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        body {
+            background-color: #F1F5F9;
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        /* Back Button */
+        .back-home {
+            position: absolute;
+            top: 2rem;
+            left: 2rem;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+        
+        .back-home:hover {
+            opacity: 0.8;
+        }
+        
+        .back-home svg {
+            margin-right: 8px;
+            width: 18px;
+            height: 18px;
+        }
+        
+        /* Header */
+        .terms-header {
+            background: var(--gradient);
+            color: white;
+            padding: 6rem 1rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .terms-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 20% 50%, rgba(255,255,255,0.15) 0%, transparent 50%);
+        }
+        
+        .terms-header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+        
+        .terms-header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Main Content */
+        .terms-container {
+            max-width: 1000px;
+            margin: -4rem auto 4rem;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            overflow: hidden;
+        }
+        
+        /* Summary Cards */
+        .terms-summary {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            padding: 3rem;
+            background: var(--light);
+            border-bottom: 1px solid #E2E8F0;
+        }
+        
+        .summary-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+        }
+        
+        .summary-card h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+        
+        .summary-card p {
+            font-size: 0.95rem;
+            color: #64748B;
+        }
+        
+        /* Terms Sections */
+        .terms-content {
+            padding: 3rem;
+        }
+        
+        .terms-section {
+            margin-bottom: 3rem;
+        }
+        
+        .terms-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--dark);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #E2E8F0;
+        }
+        
+        .terms-section h3 {
+            font-size: 1.2rem;
+            color: var(--primary-dark);
+            margin: 1.5rem 0 0.8rem;
+        }
+        
+        .terms-section p, .terms-section ul {
+            margin-bottom: 1rem;
+            color: #475569;
+        }
+        
+        .terms-section ul {
+            padding-left: 1.5rem;
+        }
+        
+        .terms-section li {
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Highlight Box */
+        .highlight-box {
+            background: rgba(99, 102, 241, 0.05);
+            border-left: 4px solid var(--primary);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .terms-header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .back-home {
+                top: 1.5rem;
+                left: 1.5rem;
+            }
+            
+            .terms-summary {
+                grid-template-columns: 1fr;
+                padding: 2rem;
+            }
+            
+            .terms-content {
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Beautiful Header with Back Button -->
+    <header class="terms-header">
+        <a href="index.html" class="back-home">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"/>
+            </svg>
+            Back to Home
+        </a>
+        <h1>Loan Terms & Conditions</h1>
+        <p>Transparent and competitive terms for domain-backed loans</p>
+    </header>
+    
+    <!-- Main Content Container -->
+    <main class="terms-container">
+        <!-- Quick Summary Cards -->
+        <section class="terms-summary">
+            <div class="summary-card">
+                <h3>Loan-to-Value Ratio</h3>
+                <p>Up to 60% of your domain's appraised value</p>
+            </div>
+            <div class="summary-card">
+                <h3>Interest Rates</h3>
+                <p>Starting at 8.9% APR (fixed)</p>
+            </div>
+            <div class="summary-card">
+                <h3>Loan Terms</h3>
+                <p>6 to 36 month repayment periods</p>
+            </div>
+        </section>
+        
+        <!-- Detailed Terms -->
+        <section class="terms-content">
+            <div class="terms-section">
+                <h2>1. Loan Overview</h2>
+                <p>DomainCollateral provides secured loans using premium domain names as collateral. These terms outline the agreement between DomainCollateral ("Lender") and the borrower ("You").</p>
+                
+                <div class="highlight-box">
+                    <h3>Key Features</h3>
+                    <ul>
+                        <li>No personal credit checks required</li>
+                        <li>Funds disbursed within 24 hours of approval</li>
+                        <li>Domain remains in secure escrow during loan term</li>
+                        <li>Early repayment without penalty</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="terms-section">
+                <h2>2. Loan Structure</h2>
+                
+                <h3>2.1 Loan Amounts</h3>
+                <p>Loan amounts range from $5,000 to $5,000,000, determined by:</p>
+                <ul>
+                    <li>Appraised value of your domain</li>
+                    <li>Current market demand</li>
+                    <li>Loan-to-value ratio (typically 30-60%)</li>
+                </ul>
+                
+                <h3>2.2 Interest Rates</h3>
+                <p>Fixed interest rates between 8.9% and 15.9% APR based on:</p>
+                <ul>
+                    <li>Domain quality and liquidity</li>
+                    <li>Loan term length</li>
+                    <li>Loan-to-value ratio</li>
+                </ul>
+                
+                <h3>2.3 Repayment Terms</h3>
+                <p>Choose from flexible repayment schedules:</p>
+                <ul>
+                    <li><strong>Short-term:</strong> 6-12 months (interest-only payments)</li>
+                    <li><strong>Standard:</strong> 12-24 months (principal + interest)</li>
+                    <li><strong>Extended:</strong> 24-36 months (principal + interest)</li>
+                </ul>
+            </div>
+            
+            <div class="terms-section">
+                <h2>3. Domain Requirements</h2>
+                <p>To qualify as collateral, domains must meet these criteria:</p>
+                <ul>
+                    <li>Registered for at least 1 year</li>
+                    <li>No pending legal disputes</li>
+                    <li>Minimum appraisal value of $10,000</li>
+                    <li>.com, .io, .co or other premium extensions</li>
+                    <li>Clear ownership with no liens</li>
+                </ul>
+                
+                <div class="highlight-box">
+                    <h3>Valuation Process</h3>
+                    <p>We evaluate domains based on:</p>
+                    <ul>
+                        <li>Comparable sales data</li>
+                        <li>Search volume and CPC for keywords</li>
+                        <li>Extension and character length</li>
+                        <li>Brandability and memorability</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="terms-section">
+                <h2>4. Fees & Charges</h2>
+                
+                <h3>4.1 Origination Fee</h3>
+                <p>1-3% of loan amount (based on risk assessment)</p>
+                
+                <h3>4.2 Late Payment Fee</h3>
+                <p>5% of payment amount or $50 (whichever is greater)</p>
+                
+                <h3>4.3 Other Fees</h3>
+                <ul>
+                    <li>Appraisal fee: $0 (waived for funded loans)</li>
+                    <li>Wire transfer fee: $25 (domestic), $45 (international)</li>
+                    <li>Default processing: $250 + legal costs</li>
+                </ul>
+            </div>
+            
+            <div class="terms-section">
+                <h2>5. Default & Recovery</h2>
+                <p>If you default on payments:</p>
+                <ul>
+                    <li>15-day grace period for late payments</li>
+                    <li>After 30 days, we may initiate domain transfer</li>
+                    <li>After 60 days, we may sell the domain to recover funds</li>
+                </ul>
+                
+                <div class="highlight-box">
+                    <h3>Important Note</h3>
+                    <p>We always prefer to work with borrowers to restructure loans rather than seize domains. Contact us immediately if you anticipate payment difficulties.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer style="text-align: center; padding: 3rem 1rem; background: var(--dark); color: white;">
+        <p style="max-width: 600px; margin: 0 auto 1.5rem; opacity: 0.8;">
+            These terms are subject to change. Last updated: <strong>January 15, 2024</strong>
+        </p>
+        <p style="font-size: 0.9rem; opacity: 0.6;">
+            DomainCollateral LLC is not a bank. Loans made pursuant to California Finance Lenders Law.
+        </p>
+    </footer>
+</body>
+</html>
